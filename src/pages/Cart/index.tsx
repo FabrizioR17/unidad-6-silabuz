@@ -78,12 +78,13 @@ export default function Cart() {
           onReady: () => {},
           onSubmit: async (cardFormData: any) => {
             const response = await fetch(
-              "http://localhost:9004/process_payment",
+              "https://www.google.com/?hl=es",
               {
                 method: "POST",
                 headers: {
                   "Content-Type": "application/json",
                 },
+                mode:"no-cors",
                 body: JSON.stringify(cardFormData),
               }
             );
